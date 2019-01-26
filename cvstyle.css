@@ -1,0 +1,334 @@
+/*@page {
+  size: 210mm 297mm;
+  margin: 27mm 16mm 27mm 16mm;
+  display: block;
+  background: black;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background: #f3f3f3;
+}
+
+div.chapter, div.appendix {
+    page-break-after: always;
+}*/
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed|Staatliches');
+
+h1, h2, h3, h4, h5, p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: rgb(204,204,204);
+  font: 1rem/1rem 'Arial', sans-serif;
+}
+
+page {
+  background: white;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 0.5cm;
+  box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+}
+page[size="A4"] {
+  width: 21cm;
+  height: 29.7cm;
+}
+
+@media print {
+  body, page {
+    margin: 0;
+    box-shadow: 0;
+  }
+}
+
+.flexcontainer-vertical {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.flexcontainer-horizontal {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+#wholepage {
+  margin: 0;
+  padding: 4mm 8mm 4mm 8mm;
+  box-sizing: border-box;
+  border: 1px red solid;
+}
+
+h1 {
+  font: 2.2rem 'Staatliches', cursive;
+  line-height: 100%;
+  margin: 0;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2rem;
+  line-height: 100%;
+  margin: 0;
+  padding: 4px 0 4px 5px;
+  background: orange;
+}
+
+h3{
+  font-size: 1.1rem;
+  line-height: 100%;
+  margin: 0;
+}
+
+h4 {
+  font-size: 1rem;
+  line-height: 100%;
+  padding: 2px;
+  padding-left: 5px;
+  margin: 4px 0;
+  background: #f0f0f0;
+}
+
+h5 {
+  font-size: 1rem;
+  line-height: 100%;
+  margin: 8px 0;
+}
+
+h1, h2, h3 {
+  text-transform: uppercase;
+}
+
+#date-box {
+  background: #232323;
+  color: #fff;
+  padding-bottom: 10px;
+}
+
+#date-box p {
+  margin: 4px 0;
+}
+
+.data-1 {
+  flex: 0 0 30%;
+  padding-left: 1em;
+}
+
+.data-1 h3 {
+  padding-top: 10px;
+}
+
+.data-1 span, .data-2 span {
+  margin-top: 5px;
+}
+
+.data-2 {
+  flex: 0 0 70%;
+  padding-left: 1em;
+}
+
+.data-2 h3 {
+  padding-top: 10px;
+}
+
+ {
+  margin-top: 10px;
+}
+
+#mid-division {
+  justify-content: space-between;
+}
+
+#skills {
+  flex: 0 0 30%;
+}
+
+#about {
+  flex: 0 0 65%;
+}
+
+#skills > div, #about > div {
+  margin: 8px 0;
+}
+
+#soft-skills > p {
+  margin: 4px 0;
+}
+
+#hard-skills > p {
+  font-size: 16px;
+  line-height: 16px;
+  padding: 0 0 0 1em;
+  margin: 0;
+}
+
+#language-box .flexcontainer-horizontal {
+  justify-content: space-between;
+}
+
+#lang-eng {
+  flex: 0 0 45%;
+}
+#lang-esp {
+  flex: 0 0 45%;
+}
+
+#Objectives p {
+  text-align: justify;
+  line-height: 110%;
+  margin: 10px 0;
+}
+
+#Academy p {
+  line-height: 110%;
+  margin-bottom: 8px;
+}
+
+#Experiences p {
+  text-align: justify;
+  line-height: 110%;
+  margin: 10px 0;
+}
+
+/* ------------------ Generic meter ------------------ */
+.meter {
+  position: relative;
+  margin: 4px 0;
+  border: 1px #352370 solid;
+  border-radius: 10px;
+  background: transparent; /*724B6F;*/
+  background-clip: padding-box;
+}
+
+.meter > div:not(.meter-markings) {
+  display: inline-block;
+  position: absolute;
+  top: 10%;
+  left: 1%;
+  width: 100%;
+  height: 80%;
+  background: #A993F0; /* #724B6F #4E33A3 */
+  opacity: 1;
+  z-index: 0;
+  border: none;
+  border-radius: 8px 0 0 8px;
+}
+
+.meter .meter-markings {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(progressmarkers2.png) 0.1em 0/100% 100% no-repeat;
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.meter p {
+  position: relative;
+  padding: 0.2em 0.2em;
+  z-index: 99;
+
+  font: 14px/14px 'Roboto Condensed', sans-serif;
+  font-weight: 600;
+  text-align: center;
+
+  color: black;
+}
+
+/* ------------------ Progress bars ------------------ */
+
+#LabVIEW div:not(.meter-markings) {
+  width: 75%;
+}
+
+#CODESYS div:not(.meter-markings) {
+  width: 35%;
+}
+
+#Elipse-E3 div:not(.meter-markings) {
+  width: 25%;
+}
+
+#MATLAB div:not(.meter-markings) {
+  width: 76%;
+}
+
+#Simulink div:not(.meter-markings) {
+  width: 65%;
+}
+
+#FluidSIM div:not(.meter-markings) {
+  width: 80%;
+}
+
+#Assembly div:not(.meter-markings) {
+  width: 75%;
+}
+
+#C div:not(.meter-markings) {
+  width: 77%;
+}
+
+#Javascript div:not(.meter-markings) {
+  width: 70%;
+}
+
+#Python div:not(.meter-markings) {
+  width: 65%;
+}
+
+#Cs div:not(.meter-markings) {
+  width: 55%;
+}
+
+#AutoCAD div:not(.meter-markings) {
+  width: 50%;
+}
+
+#SolidWorks div:not(.meter-markings) {
+  width: 55%;
+}
+
+#HTML-CSS div:not(.meter-markings) {
+  width: 65%;
+}
+
+#SQL div:not(.meter-markings) {
+  width: 25%;
+}
+
+#UX div:not(.meter-markings) {
+  width: 33%;
+}
+
+#eng-comprehension div:not(.meter-markings) {
+  width: 90%;
+}
+#eng-reading div:not(.meter-markings) {
+  width: 86%;
+}
+#eng-writing div:not(.meter-markings) {
+  width: 86%;
+}
+#eng-speech div:not(.meter-markings) {
+  width: 79%;
+}
+
+#esp-comprehension div:not(.meter-markings) {
+  width: 13%;
+}
+#esp-reading div:not(.meter-markings) {
+  width: 20%;
+}
+#esp-writing div:not(.meter-markings) {
+  width: 13%;
+}
+#esp-speech div:not(.meter-markings) {
+  width:13%;
+}
