@@ -10,6 +10,11 @@ body {
   height: 100%;
   background: #f3f3f3;
 }
+a {
+  text-decoration: none;
+  color: inherit;
+  font: inherit;
+}
 
 div.chapter, div.appendix {
     page-break-after: always;
