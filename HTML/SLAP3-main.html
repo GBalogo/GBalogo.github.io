@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Landing page for our site -->
+    <title>Responsive HTML layout Website | Landing</title>
+    <meta name="description" content="A responsive website landing page!">
+    <meta name="keywords" content="responsive, website, webdesign, landing page">
+    <!-- _______________________linked_______________________ -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" href="../images/Hand/Logo.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+
+  </head>
+
+
+  <body>
+<!-- Navigation -->
+    <!-- Top nav bars -->
+    <div id="topNavbar">
+      <div class="flex-container">
+        <a href="#" id="topBranding">
+            <span id="topLogo"> <img src="../images/Hand/Logo_transparent_no3.png" alt="SLAP3"> </span>
+            <h1 id="topBrandText">SLAP<span class="accent-2">³</span></h1>
+        </a>
+
+        <nav id="topNavbar-nav">
+          <ul class="topNavbarControl flex-container buttons">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Our process</a></li>
+            <li><a href="#">Our prices</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+          <a id="openTopMenu"><span class="fas fa-bars"></span></a>
+        </nav>
+      </div>
+    </div>
+    <!-- Sidebar & social links -->
+    <div id="sideNavbar">
+      <nav  class="sideNavbarControl">
+        <ul>
+          <li><a href="#pageSection-1">#pageSection-1</a><div class="triangle-left"></div></li>
+          <li><a href="#pageSection-2">#pageSection-2</a><div class="triangle-left"></div></li>
+          <li><a href="#pageSection-3">#pageSection-3</a><div class="triangle-left"></div></li>
+          <li><a href="#pageSection-4">#pageSection-4</a><div class="triangle-left"></div></li>
+          <li><span onclick="xfunc()">#mainFooter</span></li>
+        </ul>
+      </nav>
+    </div>
+
+<!-- Landing section of the page -->
+    <section class="topLevelSection" id="pageSection-1">
+      <!-- Splash & showcase -->
+      <div id="Landing">
+        <div class="flex-container">
+          <div class="bigImage">  <!-- big splash image -->
+            <!-- cool tech-y image goes here -->
+          </div>
+          <div class="expositionBlock boxShadowTop">
+            <div class="container">
+              <header class="dark accent-2 secondaryExpositionBlock">
+                <h2>Lorem Ipsum and more</h2>
+                <h3>Think of all the lorem ipsum!</h3>
+              </header>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- Info section about building process -->
+    <section class="dark topLevelSection"  id="pageSection-2">
+      <div class="flex-container">
+        <div class="bigImage">
+
+        </div>
+        <div id="section-2-Text">
+          <div class="flex-container boxShadowTop">
+            <div class="expositionBlock">
+              <div class="flex-container" id="section-2-Paragraphs">
+                <p>Para 1</p>
+                <p>quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,  </p>
+              </div>
+            </div>
+            <div id="sidebar-content" class="dark accent-2">
+              <h3>Some more lorem ipsum!</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- Links to other resources -->
+    <section class="topLevelSection dark"  id="pageSection-3">
+      <div class="bigImage">
+
+      </div>
+      <div class="expositionBlock boxShadowTop">
+        <div class="container">
+          <div class="flex-container" id="socialLinks">
+            <div id="twitterLink">
+              <span class="fab fa-twitter-square"></span>
+              <p>Have a bird tell us something.</p>
+            </div>
+            <div id="facebookLink">
+              <span class="fab fa-facebook-square"></span>
+              <p>Books <strong>are</strong> made of pages!</p>
+            </div>
+            <div id="discordLink">
+              <span class="fab fa-discord"></span>
+              <p>Tell us about your high score.</p>
+            </div>
+            <div id="Whatsapp">
+              <span class="fab fa-whatsapp-square"></span>
+              <p>A nice and friendly talk.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </section>
+<!-- Newsletter and contact -->
+    <section class="dark topLevelSection"  id="pageSection-4">
+      <div class="bigImage">
+
+      </div>
+      <div class="expositionBlock boxShadowTop">
+        <div class="dark accent-2 container" id="newsletterBox">
+          <h2>Subscribe to our Newsletter!</h2>
+          <h3>We'll keep you ahead of the curve.</h3>
+          <form id="newsletterForm" action="index.html" method="post">
+            <input type="email" name="newsletterEmailInput" placeholder="JohnDoe@email.com">
+          </form>
+        </div>
+      </div>
+    </section>
+<!-- Footer -->
+    <footer class="topLevelSection" id="mainFooter">
+      <p>GBalogh &copy; 2019</p>
+      <a href="../index.html">About Me</a>
+    </footer>
+    <div style="margin-top:50vh">
+
+    </div>
+  </body>
+  <script type="text/javascript" src="../JS/main.js"></script>
+</html>
