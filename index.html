@@ -1,4 +1,4 @@
-﻿<!-- TODO: add link pages -->
+<!-- TODO: add link pages -->
 
 <!-- _______________________Landing page with showcase______________________ -->
 <!DOCTYPE html>
@@ -9,13 +9,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Branding -->
-    <title>Gabriel Guedes Balogo – SLAP3 developer showcase</title>
-    <link rel="icon" href="./images/logo/Logo_square.png">
-    <meta name="description" content="Low cost static web design and development">
-    <meta name="keywords" content="low cost, website, webdesign, responsive, brand">
+    <title>SLAP3 - SHOWCASE</title>
+    <link rel="icon" href="./images/logo/logo_square.png">
+    <meta name="description" content="Showcase para webdev e arte digital">
+    <meta name="keywords" content="low cost, website, webdesign, responsive, brand, illustration, digital art, comission">
 
     <!-- Linked -->
-    <link rel="stylesheet" href="/CSS/style-index.css">
+    <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
   </head>
@@ -23,15 +23,6 @@
 
   <body>
     <div class="wrapper-page"> <!-- page wrapper -->
-      <div class="hidden" id="pop-in"></div> <!-- FIXME: currently used to show pop-ins -->
-      <!-- FIXME: REMOVE THIS FOR ACTUAL BUILD! -->
-      <div class="bleededge-only" id="bleededge-container">
-        <div class="bleededge-container-image"></div>
-        <h1>Oh my! You're here early!</h1>
-        <p>We're still figuring out the nuts and bolts, but feel free to bookmark this page!</p>
-        <p>SLAP³ (read "Slap Cubed") will soon be offering affordable webdesign and development services.</p>
-      </div>
-      <!-- FIXME: REMOVE THIS FOR ACTUAL BUILD! -->
       <div class="container-flex">  <!-- page-wide flex container -->
         <!-- _______________________sidepanel_______________________ -->
         <div class="sidepanel-landing container-grid">
@@ -40,17 +31,20 @@
             <img src="./images/logo/logo_transparent.png" alt="SLAP³" id="logo">
           </a>
 
-          <div class="picture"></div> <!-- developer picture -->
-
-          <a href="https://GBalogo.github.io/resume" target="_blank" class="button-resume button">Resume</a>
-
           <div class="description">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-            <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Entusiasta em tecnologia, atualmente ingressando no mercado de ilustrações digitais.</p>
+            <p>Participei de projetos em Design, TI, Automação e Branding. Expandindo o <em>SLAP³</em>.</p>
           </div>
 
           <div class="container-social-blocks container-flex">
+            <a href="mailto:slapcubed@gmail.com?subject=Showcase%20Page%20-%20" class="clickable">
+              <span class="fas fa-envelope"></span>
+              <p>Email</p>
+            </a>
+            <a href="http://wa.me/5511989374612" target="_blank" class="clickable">
+              <span class="fab fa-whatsapp"></span>
+              <p>Whatsapp</p>
+            </a>
             <a href="#" target="_blank" class="clickable">
               <span class="fab fa-github"></span>
               <p>Github</p>
@@ -58,14 +52,6 @@
             <a href="https://discord.gg/bAkZNSV" target="_blank" class="clickable">
               <span class="fab fa-discord"></span>
               <p>Discord</p>
-            </a>
-            <a href="http://wa.me/5511989374612" target="_blank" class="clickable">
-              <span class="fab fa-whatsapp"></span>
-              <p>Whatsapp</p>
-            </a>
-            <a class="clickable mail"><!-- href="mailto:slap3+personal@gmail.com?subject=Developer%20showcase%20page"-->
-              <span class="fas fa-envelope"></span>
-              <p>Mail me</p>
             </a>
           </div>
 
@@ -75,19 +61,38 @@
         <div class="showcase-landing container-flex">
 
           <div class="showcase-text">
-            <h1>LOREM <em>IPSUM</em> IT ALL!</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <h1>DO QUE <EM>VOCÊ</EM> PRECISA?</h1>
+            <p>O <em>SLAP³</em> está pronto para te servir, seja com uma ilustração única e estilizada, seja com um website moderno, ou mesmo com suporte e manutenção em TI!*</p>
           </div>
 
-            <!-- avoid stretching the button but keep page aligned -->
-            <!-- TODO: Better -->
-          <a href="./html/slap3-home.html" target="_blank" class="button button-calltoaction">
-            Call to action!
+      <div class="container-grid" id="options-container"> <!-- Options -->
+        <div id="illustration" class="container-button">
+            <a href="https://www.vintepila.com.br/servicos/design-grafico/eu-vou-fazer-ilustracao-digital-e-desenho/" target="_blank" class="clickable">
+              <img id="illustration-img" src="images/gallery/MarisaKirisameb.png" alt="ilustrações">
+              <p>Ilustrações</p>
+            </a>
+          </div>
+        <div id="pixelart" class="container-button">
+          <a href="https://www.vintepila.com.br/servicos/design-grafico/eu-vou-fazer-pixel-art-para-jogos-streamers-ou-marketing/" target="_blank" class="clickable">
+            <img id="pixelart-img" src="images/gallery/WitchPortrait.png" alt="pixel art">
+            <p>Pixel art</p>
           </a>
-
+        </div>
+        <div id="webdesign" class="container-button">
+          <a href="" class="clickable">
+            <img id="webdesign-img" src="images/logo/logo.png" alt="webdev">
+            <p>Webdesign</p>
+          </a>
+        </div>
+        <div id="it-support" class="container-button">
+          <a href="https://sp.olx.com.br/sao-paulo-e-regiao/servicos/manutencao-orcamento-e-montagem-de-pc-1217285215?" target="_blank" class="clickable">
+            <img id="it-support-img" src="images/logo/logo_square2.png" alt="suporte">
+            <p>Suporte</p>
+          </a>
+        </div>
+      </div>
         </div>  <!-- End of showcase -->
       </div>  <!-- End of page-wide flex container -->
     </div>  <!-- End of page wrapper -->
-    <p id="copyright">SLAP³&trade;   |   Gabriel Guedes Balogo &copy; 2019.</p>
   </body>
 </html>

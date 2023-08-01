@@ -1,0 +1,274 @@
+/* ------------------ stylesheet for landing page ------------------ */
+/* NOTE:
+  Page designed as mobile portrait first
+  Responsive design
+  Query-less objective (em heavy)
+*/
+
+/* TODO:
+  fix stretching on top elements on mobile
+  fix things not fitting in one page
+*/
+
+/* Imports */
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed|Staatliches'); /* Fonts */
+
+/* Global styling */
+:root{ /* Variables */
+  --backgroundColorDark: #333;
+  --backgroundColorLight: #F5F5F5;
+  --textColorDark:#000;
+  --textColorLight: #fff;
+  --accentColor1: #F2BF18;
+  --accentColor2: #E1BF38;
+  --shadowColor: #442D43;
+  --shadowColor: #AE942B;
+  --highlightColor2: #FAD53E;
+}
+
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+
+  color: var(--textColorLight);
+  background-color: var(--backgroundColorDark);
+
+  font: calc(0.5rem + 1.2vw + 0.3vh)/115% 'Roboto Condensed', sans-serif;
+  overflow: hidden;
+}
+
+h6 { /* FIXME: Temporary test to make a popup with js */
+  font-size: 1.2em;
+  text-transform: uppercase;
+}
+
+/* Global classes */
+.container-flex {
+  display: flex;
+}
+
+.container-grid {
+  display: grid;
+}
+
+.clickable {
+  color: inherit;
+
+  text-decoration: none;
+}
+
+.button {
+  color: inherit;
+
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* ------------------ Content specific styles ------------------ */
+.wrapper-page { /* Used to limit page to window size */
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: auto;
+
+  background: url(images/background_pattern.png) repeat center;
+  background-size: cover;
+}
+
+.wrapper-page > .container-flex { /* Creates the division between sections */
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.sidepanel-landing {  /* Contains information and links */
+  flex: 3 1 20%;
+  padding: 0.5rem 0.5rem 0.25rem 0.5rem;
+
+  border-bottom: 2px var(--backgroundColorDark) solid;
+  background: rgba(50,50,50,0.8);
+
+  grid-template-areas:
+    '. logo .'
+    'description description description'
+    'social social social';
+  justify-content: space-around;
+  align-content: space-around;
+  align-items: center;
+}
+
+#options-container {
+	padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+	grid-template-areas: 
+	'illustration pixelart'
+	'webdesign it-support';
+	justify-content: space-around;
+	align-content: space-around;
+	align-items: center;
+	background: rgba(41, 41, 41, 0.0);
+}
+
+#options-container > div {
+	margin: 0.5rem 0.5rem 0.25rem 0.5rem;
+	border-style: hidden;
+	border-width: 2px;
+	border-color: #fff;
+}
+
+#options-container > div > * > img{
+	max-width: 60%;
+	min-width: 40%;
+	min-height: 40%;
+  max-height: 60%;
+}
+
+#options-container > div > * > p{
+  margin: 0 2px 0 0;
+}
+	
+.sidepanel-landing > * { /* FIXME: temporary hack */
+  padding: 0.6rem;
+  margin: 0.2rem;
+
+  text-align: center;
+}
+.sidepanel-landing .logo {
+  grid-area: logo;
+  padding: 0;
+}
+#logo {
+  height: 5em; width: 5em;
+}
+.sidepanel-landing .picture {
+  grid-area: picture;
+  justify-self: center;
+
+  width: 5em;
+  height: 5em;
+
+  background: green;
+}
+.sidepanel-landing .description {
+  grid-area: description;
+  padding: 0 1rem;
+
+  text-align: left;
+}
+.sidepanel-landing .container-social-blocks {
+  grid-area: social;
+  padding: 0 0.6rem;
+
+  flex-flow: row;
+  justify-content: space-around;
+
+  font-size: 1em;
+}
+.container-social-blocks a {
+  padding: 0.6rem 0.6rem;
+  transition: color 0.05s, background-color 0.1s, box-shadow 0.1s;
+}
+.container-social-blocks a:hover, .container-social-blocks a:active {
+  background-color: rgba(0,0,0,0.3);
+  color: var(--textColorLight);
+  box-shadow: 0 1px 10px -3px var(--textColorDark) inset;
+}
+.container-social-blocks span {
+  font-size: 2em;
+}
+.container-social-blocks p {
+  margin: 0.5rem 0 0 0;
+}
+
+.container-button:hover, .container-button:active{
+  background-color: rgba(0,0,0,0.3);
+  color: var(--textColorLight);
+  box-shadow: 0 1px 10px -3px var(--textColorDark) inset;
+}
+
+.showcase-landing {
+  flex: 3 1 80%;
+  padding: 0.5rem;
+
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: flex-start;
+
+  text-align: center;
+
+  background: rgba(10,10,10,0.3);
+
+  max-height: 90%;
+}
+.showcase-landing > * { /* FIXME: temporary hack */
+  margin: 0 0.2rem 1rem 0.2rem;
+}
+.showcase-landing .showcase-text {
+  padding: 0;
+  margin-top: 1vh;
+
+  text-align: left;
+}
+.showcase-text p, .showcase-text h1, .showcase-landing .button-calltoaction {
+  background: rgba(0,0,0,0.3);
+
+  line-height: 115%;
+  margin: 0;
+}
+.showcase-text h1 {
+  margin: 0 0 1rem 0;
+  padding: 0.6rem;
+  border: 2px var(--backgroundColorDark) solid;
+
+  text-align: center;
+} em { font-style: normal; color: var(--accentColor1);}
+.showcase-text p {
+  padding: 0.6rem;
+  border: 2px var(--backgroundColorDark) solid;
+}
+
+#footnote {
+  position: absolute;
+  display: flex;
+  right: 0; bottom: 0;
+  z-index: 99;
+}
+#footnote > p {
+  margin: 4px;
+}
+
+#footnote-ex {
+  position: static;
+  font-size: 0.6rem;
+}
+#flag {
+  margin: 0 0.5rem;
+  font-size: 0.66em;
+  white-space: pre;
+}
+#copyright {
+  color: white;
+  font-size: 0.66em;
+  white-space: pre;
+}
+
+@media only screen and (max-width: 60em) and (orientation: portrait) {
+  .wrapper-page > .container-flex {
+    flex-flow: column nowrap;
+  }
+}
